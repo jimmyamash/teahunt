@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .cockatoo-body {
+            width: 300px;
+            bottom: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .cockatoo-crest {
+            position: absolute;
+            bottom: 118px;
+            left: -58px;
+            right: 0;
+            margin: auto;
+            width: 70px;
+            z-index: -1;
+            transform: rotate(13deg) translateY(0) translateX(0);
+            transition: .3s;
+        }
+        .cockatoo-crest.crest-up {
+            transform: rotate(-40deg) translateY(-25px) translateX(7px);
+            transition: .3s;
+        }
+        input[type="text"] {
+            width: 300px;
+            position: absolute;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+        h1 {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("input").keypress(function(){
+                $(".cockatoo-crest").addClass("crest-up");
+                setTimeout(function(){
+                    $(".cockatoo-crest").removeClass("crest-up");
+                }, 1000);
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Cockatoogle</h1>
+    <input type="text" placeholder="Search for something" />
+    <img class="cockatoo-body" src="cockatoo-body.png" />
+    <img class="cockatoo-crest" src="cockatoo-crest.png" />
+</body>
+</html>

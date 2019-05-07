@@ -1,0 +1,62 @@
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+@mixin keyframes ($keyframes) {
+    @-webkit-keyframes #{$keyframes} {
+        @content;
+    }
+    @-moz-keyframes #{$keyframes} {
+        @content;
+    }
+    @keyframes #{$keyframes} {
+        @content;
+    }
+}
+@mixin animation ($duration, $animation) {
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards;
+}
+@mixin animation-delay ($animation-delay) {
+    -webkit-animation-delay: $animation-delay;
+    -moz-animation-delay: $animation-delay;
+    animation-delay: $animation-delay;
+}

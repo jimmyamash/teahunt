@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jumper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,100' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="intro animated fadeInDown">
+            <h1 class="text-center">Welcome to jumper</h1>
+            <h3 class="text-center">experience the world through google street view</h3>
+            <h1 class="closeIntro">start</h1>
+        </div>
+        <audio autoplay loop controls="false">
+          <source src="" controls="false" type="audio/mpeg">
+        </audio>
+        <header class="nav">
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+                <h1 class="muteButton introOpacity sound text-center">mute <i class="muteIcon fa fa-volume-up"></i></h1>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <h1 class="text-center logo">jumper</h1>
+            </div>
+            <div class="col-lg-4 col-md-4  col-sm-6 col-xs-6">
+                <h1 class="location introOpacity selectedLoc text-center">New York</h1>
+            </div>
+        </header>
+        <div class="locationList hideList pageLoadHide">
+            <div class="col-lg-12">
+                <h1 id="Antarctica" class="animated fadeOutLeft location listLoc text-center">Antarctica</h1>
+                <h1 id="Tokyo" class="animated fadeOutLeft fade1 location listLoc text-center">Tokyo</h1>
+                <h1 id="NewYork" class="animated fadeOutLeft fade2 location listLoc text-center">New York</h1>
+                <h1 id="Stonehenge" class="animated fadeOutLeft fade3 location listLoc text-center">Stonehenge</h1>
+                <h1 id="WhiteHouse" class="animated fadeOutLeft fade4 location listLoc text-center">The White House</h1>
+
+            </div>
+        </div>
+        <iframe class="iframe animated fadeIn" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe>
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

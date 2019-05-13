@@ -12,7 +12,7 @@ $(function() {
                          "</div></div></div>";
             $(innerRow).prependTo(".row-content");
             if (f.name = newHashName) {
-                $('html,body').animate({ scrollTop: 0 }, 400);
+                // $('html,body').animate({ scrollTop: 0 }, 400);
                 $(".wrap-details").css("display", "block");
                 $(".wrap-list").removeClass("fade-in-down");
                 $(".row-filters").removeClass("fade-in-down");
@@ -90,7 +90,7 @@ $(function() {
         });
 
         $(".view-details").click(function(i, f){
-            $('html,body').animate({ scrollTop: 0 }, 400);
+            // $('html,body').animate({ scrollTop: 0 }, 400);
             $(".wrap-details").css("display", "block");
             $(".wrap-list").removeClass("fade-in-down");
             $(".row-filters").removeClass("fade-in-down");
@@ -101,7 +101,7 @@ $(function() {
             setTimeout(function(){
                 $(".wrap-list").css("display","none");
             }, 400);
-            
+
             // setting content
 
             window.location.hash = "#" + $(this).closest(".tea-wrapper").attr("data-name");

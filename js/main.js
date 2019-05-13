@@ -1,6 +1,7 @@
 $(function() {
     var nameHash = window.location.hash;
     var newHashName = nameHash.replace("#","");
+    var scrollPosition = 0;
 
     var req = $.getJSON('tea.json', function(data) {
         $.each(data, function(i, f) {
@@ -52,21 +53,6 @@ $(function() {
                 $("#Search").blur();
             }
         });
-        // $('#Search').keyup(function(){
-        //     var valThis = $(this).val().toLowerCase();
-        //     $('.tea-name').each(function(){
-        //         if ($(this).is(':contains("' + valThis + '")')) {
-        //             $(this).closest(".tea-item").show();
-        //         } else {
-        //             $(this).closest(".tea-item").hide();
-        //         }
-        //         if($(".tea-item:visible").length == 0) {
-        //             $(".no-results").show();
-        //         } else {
-        //             $(".no-results").hide();
-        //         }
-        //     });
-        // });
         $('#Search').keyup(function(){
             $('.box-filter-type > span').text("type");
             $('.box-filter-effects > span').text("effects");
@@ -219,13 +205,6 @@ $(document).ready(function(){
             }
         }, 50);
     });
-    // $('body').bind( "touchstart", function(e){
-    //     setTimeout(function(){
-    //         if ($(".drop-down").hasClass("active")) {
-    //             $(".drop-down").removeClass("active");
-    //         }
-    //     }, 50);
-    // });
     $(".box-filter-type").click(function(){
         if ($(".tea-item:visible").length == 0) {
             $(".no-results").show();

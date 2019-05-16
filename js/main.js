@@ -89,6 +89,7 @@ $(function() {
             setTimeout(function(){
                 $(".wrap-list").css("display","none");
             }, 400);
+            $(window).scrollTop(0);
 
             // setting content
 

@@ -86,7 +86,7 @@ $(function() {
             $(".wrap-details").addClass("fade-in-up");
             setTimeout(function(){
                 $(".wrap-list").css("display","none");
-            }, 400);
+            }, 300);
 
             // setting content
 
@@ -103,7 +103,7 @@ $(function() {
         });
         $(".go-back").click(function(){
             window.location.hash = "";
-            $('html,body').animate({ scrollTop: 0 }, 400);
+            // $('html,body').animate({ scrollTop: 0 }, 400);
             $(".wrap-list").css("display", "block");
             $(".wrap-list").removeClass("fade-out-up");
             $(".wrap-list").addClass("fade-in-down");
@@ -113,7 +113,7 @@ $(function() {
             $(".wrap-details").addClass("fade-out-down");
             setTimeout(function(){
                 $(".wrap-details").css("display","none");
-            }, 400);
+            }, 300);
         });
         $(".btn-reset").click(function(){
             $("#Search").val('');

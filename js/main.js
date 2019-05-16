@@ -1,7 +1,7 @@
 $(function() {
     var nameHash = window.location.hash;
     var newHashName = nameHash.replace("#","");
-    var scrollPosition = 0;
+    var tempScrollTop = 0;
 
     var req = $.getJSON('tea.json', function(data) {
         $.each(data, function(i, f) {
@@ -76,6 +76,8 @@ $(function() {
         });
 
         $(".view-details").click(function(i, f){
+
+            tempScrollTop = $(window).scrollTop();
             // $('html,body').animate({ scrollTop: 0 }, 400);
             $(".wrap-details").css("display", "block");
             $(".wrap-list").removeClass("fade-in-down");
@@ -86,7 +88,7 @@ $(function() {
             $(".wrap-details").addClass("fade-in-up");
             setTimeout(function(){
                 $(".wrap-list").css("display","none");
-            }, 300);
+            }, 400);
 
             // setting content
 
@@ -113,7 +115,8 @@ $(function() {
             $(".wrap-details").addClass("fade-out-down");
             setTimeout(function(){
                 $(".wrap-details").css("display","none");
-            }, 300);
+            }, 400);
+            $(window).scrollTop(tempScrollTop);
         });
         $(".btn-reset").click(function(){
             $("#Search").val('');
